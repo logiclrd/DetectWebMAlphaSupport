@@ -1,0 +1,4 @@
+#!/bin/sh
+
+ffmpeg -i alpha.png -c:v libvpx-vp9 alpha.webm
+
