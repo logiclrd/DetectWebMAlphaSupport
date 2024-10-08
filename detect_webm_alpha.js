@@ -1,3 +1,6 @@
+//
+// detect_webm_alpha.js -- https://github.com/logiclrd/DetectWebMAlphaSupport/
+//
 function DetectWebMAlpha()
 {
 	return new Promise(
