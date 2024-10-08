@@ -10,7 +10,7 @@ This function is based on an approach in the following Stack Overflow question:
 
 https://stackoverflow.com/questions/29416579/how-to-feature-detect-if-browser-supports-webm-alpha-transparency
 
-This approach embeds a tiny test WebM file that has alpha data in it, and it uses `<canvas>` to test it. `Canvas` objects conveniently support drawing from a `<video>` directly onto the canvas.
+This approach embeds a tiny test WebM file that has alpha data in it directly into the code using a `data:` URL, and it uses `<canvas>` to test it. `Canvas` objects conveniently support drawing from a `<video>` directly onto the canvas.
 
 `detect_webm_alpha.js` builds upon this approach in the following ways:
 
