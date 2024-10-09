@@ -54,7 +54,10 @@ function DetectWebMAlpha()
 							// is 128, then the drawImage call didn't process alpha and just replaced the
 							// pixels. Apparently, in some non-supporting IE versions, the result might
 							// also be 0, presumably because getImageData doesn't actually function.
-							if ((blendResult > 128) && (blendResult < 255))
+							//
+							// Safari, naturally, does its own thing and produces pixels with a value of
+							// 138 or 139. The correct blended result is 191 or 192.
+							if ((blendResult > 180) && (blendResult < 200))
 								resolve();
 							else
 								reject();
