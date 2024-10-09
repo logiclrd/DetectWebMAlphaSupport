@@ -44,7 +44,7 @@ function DetectWebMAlpha()
 							context.drawImage(video, 0, 0);
 
 							// Check that the video was composited correctly.
-							var topLeftPixel = context.getImageData(0, 0, 1, 1);
+							var topLeftPixel = context.getImageData(2, 2, 1, 1);
 
 							var blendResult = topLeftPixel.data[0];
 
@@ -69,7 +69,7 @@ function DetectWebMAlpha()
 
 				source.src = "data:video/webm;base64,GkXfo59ChoEBQveBAULygQRC84EIQoKEd2VibUKHgQJChYECGFOAZwEAAAAAAAIREU2bdLpNu4tTq4QVSalmU6yBoU27i1OrhBZUrmtTrIHYTbuMU6uEElTDZ1OsggEpTbuMU6uEHFO7a1OsggH77AEAAAAAAABZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVSalmsirXsYMPQkBNgI1MYXZmNjAuMTYuMTAwV0GNTGF2ZjYwLjE2LjEwMESJiEBEAAAAAAAAFlSua8yuAQAAAAAAAEPXgQFzxYgVQM9yjABNrpyBACK1nIN1bmSIgQCGhVZfVlA5g4EBI+ODhAJiWgDglLCBQLqBQJqBAlPAgQFVsIRVuYEBElTDZ0CAc3OgY8CAZ8iaRaOHRU5DT0RFUkSHjUxhdmY2MC4xNi4xMDBzc9pjwItjxYgVQM9yjABNrmfIpUWjh0VOQ09ERVJEh5hMYXZjNjAuMzEuMTAyIGxpYnZweC12cDlnyKFFo4hEVVJBVElPTkSHkzAwOjAwOjAwLjA0MDAwMDAwMAAfQ7Z1x+eBAKDCoZ+BAAAAgkmDQgAD8AP2ADgkHBhKAAAwYAAAE7gYAAAAdaGeppzugQGll4JJg0IAA/AD9gA4JBwYSgAAMGAAAE+AHFO7a5G7j7OBALeK94EB8YIBr/CBAw==";
 
-				source.addEventListener("error", (q) => { alert(q); RemoveElement(); reject(); });
+				source.addEventListener("error", (q) => { RemoveElement(); reject(); });
 
 				video.appendChild(source);
 
